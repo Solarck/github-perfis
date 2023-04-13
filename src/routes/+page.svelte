@@ -1,22 +1,42 @@
 <script>
-     let texto = "Clique aqui para mudar o texto."
+  import InputPesquisar from "../components/Input-pesquisar.svelte";
+  import Title from "../components/Title.svelte";
+</script>
 
-     function trocaTexto(){
-        texto = "Novo texto após o clique!"
-     }
-  </script>
-  
-  <button class="title" on:click={trocaTexto}>{texto}</button>
-  
-  <style>
-    .title {
-      padding: 1rem 1.75rem;
-      font-family: 'Rubik', sans-serif;
-      font-size: 1.25rem;
-      font-weight: 300;
-      color: #fff;
-      background-color: #6930c3;
-      border: none;
-      border-radius: 0.5rem;
-    }
-  </style>
+<div class="container-app">
+  <div class="container">
+    <header>
+      <Title />
+      <InputPesquisar />
+    </header>
+  </div>
+</div>
+
+<style>
+  .container-app {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    margin-top: 20px;
+    width: 90%;
+    height: 590px;
+    background: #272a37;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+</style>
