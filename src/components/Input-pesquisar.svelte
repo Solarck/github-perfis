@@ -1,5 +1,9 @@
+<script>
+    let value = "teste";
+</script>
+
 <label class="botao-input">
-    <input type="text" class="input" />
+    <input type="text" class="input" bind:value />
     <button type="submit" class="botao">Buscar</button>
 </label>
 
@@ -36,6 +40,7 @@
         border-radius: 8px;
         border: none;
         background: #2e80fa;
+        box-shadow: 0px 10px 20px rgba(222, 231, 247, 0.4);
         color: #fff;
         font-size: 22px;
         cursor: pointer;

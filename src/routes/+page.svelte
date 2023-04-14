@@ -4,8 +4,7 @@
   import RepositoriosRecentes from "../components/Repositorios-recentes.svelte";
   import Title from "../components/Title.svelte";
   import UsuarioInfo from "../components/Usuario-info.svelte";
-
-  let usuario = {};
+  import { usuario } from "../interfaces/IUsuario";
 </script>
 
 <div class="container-app">

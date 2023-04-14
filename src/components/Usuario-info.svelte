@@ -1,16 +1,19 @@
-<h1>Usuario: Solarck</h1>
-<h1>Nome: Fernando Carlos</h1>
-<h1>Seguidores: 25</h1>
-<h1>Repositórios: 22</h1>
-<h1>location": "São Paulo, Brasil"</h1>
+<script>
+    import { usuario } from "../interfaces/IUsuario";
+</script>
+
+<h1>Usuario: {usuario.nome}</h1>
+<h1>Nome: {usuario.login}</h1>
+<h1>Seguidores: {usuario.seguidores}</h1>
+<h1>Repositórios:{usuario.repositorios_publicos}</h1>
+<h1>localidade": {usuario.localidade}</h1>
 
 <style>
-    h1{
+    h1 {
         margin-left: 20px;
         margin-top: 25px;
         margin-bottom: -15px;
         font-size: 20px;
-        color:#395278;
+        color: #395278;
     }
 </style>
-
