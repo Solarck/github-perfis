@@ -1,29 +1,39 @@
-<script>
-  import FotoUsuario from "../components/Foto-usuario.svelte";
-  import InputPesquisar from "../components/Input-pesquisar.svelte";
-  import RepositoriosRecentes from "../components/Repositorios-recentes.svelte";
+<script lang="ts">
   import Title from "../components/Title.svelte";
-  import UsuarioInfo from "../components/Usuario-info.svelte";
-  import { usuario } from "../interfaces/IUsuario";
+  import UsuarioDados from "../components/Usuario-dados.svelte";
+  import type IUsuario from "../interfaces/IUsuario";
+
+  let usuario: IUsuario | null = null;
+  let value = '' 
+
+  function aoSubmeter() {
+    usuario = {
+      login: "Solarck",
+      avatar_url: "",
+      perfil_url: "https://github.com/Solarck",
+      nome: "dolores",
+      repositorios_publicos: 50,
+      seguidores: 23,
+      localidade: "São Paulo, BR",
+      bio: " A pressa é inimiga da perfeição.",
+    };
+  }
 </script>
 
 <div class="container-app">
   <div class="container">
     <header>
       <Title />
-      <InputPesquisar />
 
-      <div class="container-usuario">
-        <FotoUsuario />
+      <form class="busca-usuario" on:submit|preventDefault={aoSubmeter}>
+        <input type="text" class="input" bind:value />
+        <button type="submit" class="botao">Buscar</button>
+      </form>
 
-        <div class="User-info">
-          <UsuarioInfo />
-        </div>
+      {#if usuario}
+        <UsuarioDados />
+      {/if}
 
-        <div class="User-info">
-          <RepositoriosRecentes />
-        </div>
-      </div>
     </header>
   </div>
 </div>
@@ -56,17 +66,45 @@
     flex-direction: column;
   }
 
-  .container-usuario {
-    margin-top: 50px;
-    width: 780px;
-    height: 300px;
-    background: #ffff;
-    border-radius: 10px;
+  input {
+    padding-left: 10px;
+    width: 220px;
+    height: 35px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1.5px solid #2e80fa;
+    border-right: 0px;
+    box-shadow: 0px 10px 20px rgba(222, 231, 247, 0.4);
+    outline: 0;
+  }
+
+  .input::placeholder {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 19.5px;
+    line-height: 26px;
+    color: #6e8cba;
+  }
+
+  .busca-usuario {
+    justify-content: start;
     display: flex;
   }
 
-  .User-info {
-    display: inline-block;
-    flex-direction: column;
+  .botao {
+    margin-left: -10px;
+    padding: 7px 18px;
+    border-radius: 8px;
+    border: none;
+    background: #2e80fa;
+    box-shadow: 0px 10px 20px rgba(222, 231, 247, 0.4);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .botao:hover {
+    background: #4590ff;
   }
 </style>
