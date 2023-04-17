@@ -9,13 +9,13 @@ export default interface IUsuario {
   bio: string;
 }
 
-export const usuario: IUsuario = {
-  login: 'Solarck',
-  avatar_url: '',
-  perfil_url: 'https://github.com/Solarck',
-  nome: 'dolores',
-  repositorios_publicos: 50,
-  seguidores: 23,
-  localidade: 'São Paulo, BR',
-  bio: ' A pressa é inimiga da perfeição.'
-}
+// export const usuario: IUsuario = {
+//   login: 'Solarck',
+//   avatar_url: '',
+//   perfil_url: 'https://github.com/Solarck',
+//   nome: 'dolores',
+//   repositorios_publicos: 50,
+//   seguidores: 23,
+//   localidade: 'São Paulo, BR',
+//   bio: ' A pressa é inimiga da perfeição.'
+// }

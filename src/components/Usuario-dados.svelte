@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { usuario } from "../interfaces/IUsuario";
 </script>
 
@@ -93,4 +93,4 @@
     font-size: 20px;
     color: #395278;
   }
-</style>
+</style> -->
