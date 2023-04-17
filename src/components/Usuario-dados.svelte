@@ -1,21 +1,20 @@
-<!-- <script>
-  import { usuario } from "../interfaces/IUsuario";
+<script lang="ts">
+  import type IUsuario from "../interfaces/IUsuario";
+  export let usuario: IUsuario;
 </script>
 
 <div class="container-usuario">
-  <div class="User-info">
+  <div class="user-info">
     <div class="foto-container">
-      <a href="">
-        <div class="foto-usuario">
-          <img src={usuario.avatar_url} alt="" />
-        </div>
-      </a>
+      <div class="foto-usuario">
+        <img src={usuario.avatar_url} alt="" />
+      </div>
     </div>
 
     <nav>
       <div class="usuario">
-        <h1>Usuario: {usuario.nome}</h1>
-        <h1>Nome: {usuario.login}</h1>
+        <h1>Usuario: {usuario.login}</h1>
+        <h1>Nome: {usuario.nome}</h1>
         <h1>Seguidores: {usuario.seguidores}</h1>
         <h1>Repositórios:{usuario.repositorios_publicos}</h1>
         <h1>localidade": {usuario.localidade}</h1>
@@ -37,7 +36,7 @@
 </div>
 
 <style>
-  .container-usuario {
+   .container-usuario {
     margin-top: 50px;
     width: 780px;
     height: 300px;
@@ -45,7 +44,7 @@
     border-radius: 10px;
     display: flex;
   }
-
+  
   .foto-container {
     margin: 15px;
   }
@@ -93,4 +92,4 @@
     font-size: 20px;
     color: #395278;
   }
-</style> -->
+</style>
