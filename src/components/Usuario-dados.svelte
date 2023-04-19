@@ -22,10 +22,22 @@
 
       <div class="usuario-repositorio">
         <h1 class="titulo">Repositorios recentes:</h1>
-        <a href=""><h1>Curso-Svelte</h1></a>
-        <a href=""><h1>calculadora</h1></a>
+        <ul>
+          {#each usuario.repositorios_recentes as repositorio}
+            <li>
+              <a
+                rel="noopener"
+                target="_blank"
+                href={repositorio.url}
+                class="repositorio"><h1>{repositorio.nome}</h1></a
+              >
+            </li>
+          {/each}
+        </ul>
+
+        <!-- <a href=""><h1>calculadora</h1></a>
         <a href=""><h1>github</h1></a>
-        <a href=""><h1>teste</h1></a>
+        <a href=""><h1>teste</h1></a> -->
       </div>
     </nav>
 
@@ -36,9 +48,9 @@
 </div>
 
 <style>
-   .container-usuario {
+  .container-usuario {
     margin-top: 50px;
-    width: 780px;
+    width: 800px;
     height: 300px;
     background: #ffff;
     border-radius: 10px;

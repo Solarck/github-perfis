@@ -2,6 +2,8 @@
     import { createEventDispatcher } from "svelte";
     import type IUsuario from "../interfaces/IUsuario";
     import UsuarioDados from "./Usuario-dados.svelte";
+    import { buscaRepositorio, buscaUsuario } from "../requisicoes";
+    import montaUsuario from "../utils/montausuario";
 
     let value = "";
     let statusErro: null | number;
@@ -11,24 +13,19 @@
     }>();
 
     async function aoSubmeter() {
-        const conexaoApi = await fetch(`https://api.github.com/users/${value}`);
+        const conexaoApi = await buscaUsuario(value);
+        const repositorioUsuario = await buscaRepositorio(value);
 
         if (conexaoApi.ok) {
             const conexaoConvertida = await conexaoApi.json();
-
+            const dadosRepositorios = await repositorioUsuario.json();
             // na variavel dispatch damos um nome do evento, personalizado
             //sendo assim "alterarUsuario" a personalização.
             //logo após a vírgula vem a informação que o evento irá carregar, funciona como um evento, que precisa ser "escutado"
-            dispatch("alterarUsuario", {
-                login: conexaoConvertida.login,
-                avatar_url: conexaoConvertida.avatar_url,
-                perfil_url: conexaoConvertida.url,
-                nome: conexaoConvertida.name,
-                repositorios_publicos: conexaoConvertida.public_repos,
-                seguidores: conexaoConvertida.followers,
-                localidade: conexaoConvertida.location,
-                bio: conexaoConvertida.bio,
-            });
+            dispatch(
+                "alterarUsuario",
+                montaUsuario(conexaoConvertida, dadosRepositorios)
+            );
             statusErro = null;
         } else {
             statusErro = conexaoApi.status;
@@ -45,7 +42,9 @@
         class:erro-input={statusErro === 404}
     />
     <!-- a diretiva class a cima adiciona uma classe caso o usuario não seja encontrado -->
-    <button type="submit" class="botao">Buscar</button>
+    <button type="submit" class="botao" class:erro-input={statusErro === 404}
+        >Buscar</button
+    >
     {#if statusErro === 404}
         <span class="erro">Usuário não encontrado!</span>
     {/if}
@@ -94,13 +93,14 @@
     .erro {
         display: flex;
         justify-content: center;
-        margin-top: 15px;
+        margin-top: 25px;
         font-size: 20px;
         font-weight: 600;
         color: rgba(255, 0, 0, 0.712);
     }
 
     .erro-input {
-        border: 1px solid rgba(255, 0, 0, 0.712);
+        border: 1px solid rgba(255, 0, 0, 0.418);
+        box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.274);
     }
 </style>
