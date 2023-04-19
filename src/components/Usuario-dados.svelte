@@ -44,7 +44,6 @@
     border-radius: 10px;
     display: flex;
   }
-  
   .foto-container {
     margin: 15px;
   }

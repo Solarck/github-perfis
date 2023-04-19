@@ -5,7 +5,7 @@
   import type IUsuario from "../interfaces/IUsuario";
 
   let usuario: IUsuario | null = null;
-  function definirUsuario(evento: CustomEvent<IUsuario>) {
+  function definirUsuario(evento: CustomEvent<IUsuario | null>) {
     usuario = evento.detail;
   }
 </script>
@@ -23,7 +23,7 @@
       </div>
 
       {#if usuario}
-          <UsuarioDados {usuario} />
+        <UsuarioDados {usuario} />
       {/if}
     </header>
   </div>
@@ -61,5 +61,4 @@
     justify-content: start;
     display: flex;
   }
-
 </style>
