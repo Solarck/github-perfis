@@ -64,8 +64,12 @@
   }
 
   @media screen and (max-width: 768px) {
+    .container-app{
+      width: 100%;
+    }
     .container{
-      height: 300vw;
+      width: 100%;
+      height: 280vw;
     }
 }
 </style>

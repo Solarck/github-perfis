@@ -120,7 +120,7 @@
   @media screen and (max-width: 768px) {
     .container-usuario {
       display: flex;
-      width: 98%;
+      width: 100%;
       height: 700px;
       justify-content: start;
       align-items: center;
@@ -135,8 +135,12 @@
 
     .usuario {
       margin-top: 0px;
-      margin-left: 20px;
+      margin-left: 0px;
       width: 300px;
+    }
+
+    h1{
+      font-size: 18px;
     }
 
     .usuario-repositorio {
@@ -149,7 +153,7 @@
       display: inline-block;
       font-size: 18px;
       width: 250px;
-      margin-left: 40px;
+      margin-left: 20px;
     }
 
     p {
