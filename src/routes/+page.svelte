@@ -62,4 +62,10 @@
     justify-content: start;
     display: flex;
   }
+
+  @media screen and (max-width: 768px) {
+    .container{
+      height: 300vw;
+    }
+}
 </style>

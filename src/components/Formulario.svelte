@@ -103,4 +103,14 @@
         border: 1px solid rgba(255, 0, 0, 0.418);
         box-shadow: 0px 10px 20px rgba(255, 0, 0, 0.274);
     }
+
+    @media screen and (max-width: 768px) {
+        input {
+            width: 200px;
+        }
+
+        .erro-input {
+            width: 150px;
+        }
+    }
 </style>

@@ -12,19 +12,19 @@
     </div>
 
     <nav>
-      <div class="usuario">
-        <h1>Usuario: {usuario.login}</h1>
-        <h1>Nome: {usuario.nome}</h1>
-        <h1>Seguidores: {usuario.seguidores}</h1>
-        <h1>Repositórios:{usuario.repositorios_publicos}</h1>
-        <h1>localidade": {usuario.localidade}</h1>
+      <div class="usuario color-blue">
+        <h1 class="color-blue">Usuario: <p class="p">{usuario.login}</p></h1>
+        <h1 class="color-blue">Nome: <p class="p">{usuario.nome}</p></h1>
+        <h1 class="color-blue">Seguidores: <p class="p">{usuario.seguidores}</p></h1>
+        <h1 class="color-blue">Repositórios: <p class="p">{usuario.repositorios_publicos}</p></h1>
+        <h1 class="color-blue">localidade: <p class="p">{usuario.localidade}</p></h1>
       </div>
 
       <div class="usuario-repositorio">
-        <h1 class="titulo">Repositorios recentes:</h1>
+        <h1 class="titulo color-blue">Repositorios recentes:</h1>
         <ul>
           {#each usuario.repositorios_recentes as repositorio}
-            <li>
+            <li class="repositorios-recentes">
               <a
                 rel="noopener"
                 target="_blank"
@@ -34,14 +34,10 @@
             </li>
           {/each}
         </ul>
-
-        <!-- <a href=""><h1>calculadora</h1></a>
-        <a href=""><h1>github</h1></a>
-        <a href=""><h1>teste</h1></a> -->
       </div>
     </nav>
 
-    <h1 class="bio">
+    <h1 class="bio color-blue">
       Bio: <p>{usuario.bio}</p>
     </h1>
   </div>
@@ -56,6 +52,7 @@
     border-radius: 10px;
     display: flex;
   }
+
   .foto-container {
     margin: 15px;
   }
@@ -71,13 +68,17 @@
     position: absolute;
     display: inline-block;
     font-size: 25px;
-    color: #2e80fa;
     margin-top: 40px, 0px;
   }
 
   p {
     display: inline-block;
     color: #395278;
+  }
+
+  .p {
+    margin: 0;
+    margin-left: 5px;
   }
 
   nav {
@@ -102,5 +103,57 @@
     margin-bottom: -15px;
     font-size: 20px;
     color: #395278;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .repositorios-recentes {
+    margin-left: -40px;
+  }
+
+  .color-blue {
+    color: #2e80fa;
+  }
+
+  @media screen and (max-width: 768px) {
+    .container-usuario {
+      display: flex;
+      width: 98%;
+      height: 700px;
+      justify-content: start;
+      align-items: center;
+    }
+
+    .foto-container {
+      display: flex;
+      justify-content: center;
+      margin-top: -90px;
+      margin-left: 0px;
+    }
+
+    .usuario {
+      margin-top: 0px;
+      margin-left: 20px;
+      width: 300px;
+    }
+
+    .usuario-repositorio {
+      margin-left: -300px;
+      margin-top: 180px;
+      width: 300px;
+    }
+
+    .bio {
+      display: inline-block;
+      font-size: 18px;
+      width: 250px;
+      margin-left: 40px;
+    }
+
+    p {
+      margin-top: 5px;
+    }
   }
 </style>
