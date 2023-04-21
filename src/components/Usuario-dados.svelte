@@ -120,7 +120,7 @@
   @media screen and (max-width: 768px) {
     .container-usuario {
       display: flex;
-      width: 100%;
+      width: 90%;
       height: 730px;
       justify-content: start;
       align-items: center;
@@ -130,7 +130,7 @@
       display: flex;
       justify-content: center;
       margin-top: -150px;
-      margin-left: 58px;
+      margin-left: 45px;
     }
 
     .usuario {
