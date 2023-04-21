@@ -130,7 +130,7 @@
       display: flex;
       justify-content: center;
       margin-top: -150px;
-      margin-left: 45px;
+      margin-left: 40px;
     }
 
     .usuario {

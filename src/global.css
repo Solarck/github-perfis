@@ -11,6 +11,8 @@ body{
     }
 
     .titulo-principal{
+        text-align: center;
         width: 350px;
+        font-size: 16px;
     }
 }
