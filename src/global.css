@@ -9,4 +9,8 @@ body{
     body{
         background: #272a37;
     }
+
+    .titulo-principal{
+        width: 350px;
+    }
 }

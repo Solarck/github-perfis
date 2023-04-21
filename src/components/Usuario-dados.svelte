@@ -121,7 +121,7 @@
     .container-usuario {
       display: flex;
       width: 100%;
-      height: 700px;
+      height: 730px;
       justify-content: start;
       align-items: center;
     }
@@ -129,8 +129,8 @@
     .foto-container {
       display: flex;
       justify-content: center;
-      margin-top: -90px;
-      margin-left: 0px;
+      margin-top: -150px;
+      margin-left: 58px;
     }
 
     .usuario {
@@ -146,14 +146,14 @@
     .usuario-repositorio {
       margin-left: -300px;
       margin-top: 180px;
-      width: 300px;
+      width: 280px;
     }
 
     .bio {
       display: inline-block;
       font-size: 18px;
-      width: 250px;
       margin-left: 20px;
+      width: 280px;
     }
 
     p {

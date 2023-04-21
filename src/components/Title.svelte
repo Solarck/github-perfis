@@ -1,5 +1,5 @@
 <h1>Perfis do GitHub</h1>
-<h3>Digite um perfil existente, para buscar as informações.</h3>
+<h3 class="titulo-principal">Digite um perfil existente, para buscar as informações.</h3>
 
 <style>
     h1 {
