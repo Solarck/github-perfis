@@ -8,11 +8,13 @@ body{
 @media screen and (max-width: 768px) {
     body{
         background: #272a37;
+        padding: 0;
+        margin: 0;
+
     }
 
     .titulo-principal{
         text-align: center;
-        width: 350px;
         font-size: 16px;
     }
 }

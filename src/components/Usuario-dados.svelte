@@ -6,9 +6,7 @@
 <div class="container-usuario">
   <div class="user-info">
     <div class="foto-container">
-      <div class="foto-usuario">
-        <img src={usuario.avatar_url} alt="" />
-      </div>
+        <img class="foto-usuario" src={usuario.avatar_url} alt="" />
     </div>
 
     <nav>
@@ -47,7 +45,7 @@
   .container-usuario {
     margin-top: 50px;
     width: 800px;
-    height: 300px;
+    height: 325px;
     background: #ffff;
     border-radius: 10px;
     display: flex;
@@ -67,7 +65,7 @@
   .bio {
     position: absolute;
     display: inline-block;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 40px, 0px;
   }
 
@@ -92,7 +90,7 @@
   }
 
   .usuario-repositorio {
-    margin-left: 45px;
+    margin-left: 30px;
     margin-top: -200px;
   }
 
@@ -129,8 +127,13 @@
     .foto-container {
       display: flex;
       justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 20px;
+    }
+
+    .foto-usuario{
       margin-top: -150px;
-      margin-left: 40px;
     }
 
     .usuario {
