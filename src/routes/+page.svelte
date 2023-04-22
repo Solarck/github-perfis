@@ -32,13 +32,9 @@
 
 <style>
   .container-app {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    width: 100%;
-    height: 90vh;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .container {
@@ -64,10 +60,9 @@
   }
 
   @media screen and (max-width: 768px) {
-    .container-app{
-      width: 100%;
-    }
     .container{
+      margin: 0px;
+      padding-top: 0px;
       width: 100%;
       height: 280vw;
     }

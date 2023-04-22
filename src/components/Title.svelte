@@ -3,11 +3,12 @@
 
 <style>
     h1 {
+        margin-top: 20px;
         text-align: center;
         color: rgb(70, 226, 226);
     }
     h3 {
         margin-top: -10px;
-        color: aliceblue;
+        color: #ffff;
     }
 </style>
