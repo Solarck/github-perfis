@@ -72,6 +72,7 @@
       margin: 0px;
       padding-top: 0px;
       height: 280vw;
+      border-radius: none;
     }
 }
 </style>
