@@ -8,6 +8,7 @@
         color: rgb(70, 226, 226);
     }
     h3 {
+        text-align: center;
         margin-top: -10px;
         color: #ffff;
     }
