@@ -7,7 +7,6 @@
   let usuario: IUsuario | null = null;
   function definirUsuario(evento: CustomEvent<IUsuario | null>) {
     usuario = evento.detail;
-    console.log(usuario);
   }
 </script>
 
@@ -31,6 +30,14 @@
 </div>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+  :global(body){
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
   .container-app {
     display: flex;
     justify-content: center;
@@ -61,9 +68,9 @@
 
   @media screen and (max-width: 768px) {
     .container{
+      width: 100%;
       margin: 0px;
       padding-top: 0px;
-      width: 100%;
       height: 280vw;
     }
 }
